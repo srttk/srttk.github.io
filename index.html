@@ -21,14 +21,18 @@
 .hack_hero{
   margin-top: 14%;
 }
+.hack_hover{
+  -webkit-transition: all 1s ease-in-out;
+}
 .hack_hover:hover{
   color: #789856;
   cursor: pointer;
   /**/
   -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
+  /*-moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;*/
+  -webkit-transform: rotateX(180deg);
 
 }
 .hack_hover small:hover{
