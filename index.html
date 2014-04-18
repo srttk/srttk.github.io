@@ -22,7 +22,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="hack_theme">
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
       <a href="#" class="navbar-brand">S4R47H</a>
@@ -42,18 +42,18 @@
   </div>
  <!-- Begin page content -->
 
-      <div class="hack_hero jumbotron">
+      <div class="hack_hero jumbotron hack_theme">
       <div class="container">
           <div class="row">
             <div class="col-md-12 hacku">
-                 <h1 class="hack_hover"> MAKING<small> THINGS</small></h1>
+                 <h1 class="hack_hover text-effect"> MAKING<small> THINGS</small></h1>
           
             </div>
           </div>
             <hr width="50%"/>
           <div class="row">
             <div class="col-md-12 hacku">
-              <h1 class="hack_hover">BREAKING <small>THINGS</small></h1>
+              <h1 class="hack_hover text-effect">BREAKING <small>THINGS</small></h1>
             
             </div>
           </div>
@@ -96,6 +96,10 @@
   <script type="text/javascript">
   $(function(){
     $(".text-effect-loop").textEffectLoop();
+    $('.text-effect').click(function(){
+      $(".text-effect").textEffect();
+    });
+    
   });
   </script>
 </html>
