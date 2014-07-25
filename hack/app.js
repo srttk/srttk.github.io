@@ -1,4 +1,4 @@
-define(['jquery','underscore','Backbone','views/headerview','views/homeview','views/aboutview','views/notfoundview'],function($,_,Backbone,HeaderView,HomeView,AboutView,NFView){
+define(['jquery','underscore','Backbone','views/headerview','views/homeview','views/servicesview','views/aboutview','views/notfoundview'],function($,_,Backbone,HeaderView,HomeView,ServicesView,AboutView,NFView){
     var App=Backbone.Router.extend({
     	initialize:function(){
             console.log('This site is Created and maintained by Sarath');
@@ -8,6 +8,7 @@ define(['jquery','underscore','Backbone','views/headerview','views/homeview','vi
     	routes:{
     		'':'homePage',
             'home':'homePage',
+            'services':'servicesPage',
     		'about':'aboutPage',
     		'*actions':'notfoundPage'
     	},
@@ -15,6 +16,10 @@ define(['jquery','underscore','Backbone','views/headerview','views/homeview','vi
     		var home=new HomeView();
             this.markNav('home');
     	},
+        servicesPage:function(){
+            var services=new ServicesView();
+            this.markNav('services');
+        },
     	aboutPage:function(){
     		var about=new AboutView();
             this.markNav('about');
