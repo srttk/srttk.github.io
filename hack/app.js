@@ -29,8 +29,14 @@ define(['jquery','underscore','Backbone','views/headerview','views/homeview','vi
     		var nf=new NFView();
     	},
     	start:function(){
-
-    		Backbone.history.start();
+            //Pretty links
+            $('a').click(function(e){
+                e.preventDefault();
+                Backbone.history.navigate(e.target.pathname,{trigger:true});
+            });
+            //
+    		// Backbone.history.start();
+            Backbone.history.start({pushState: true});
     	},
         markNav: function(route) {
             $(".masthead-nav").find('li').removeClass('active')
