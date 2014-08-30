@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -11,6 +12,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<title>Sarath's Hack World</title>
+<link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Yesteryear">
+<link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Pacifico">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/nprogress.css">
@@ -37,6 +40,7 @@
 		background-color:#fff;
 	}
 	.navbar-brand{
+		font-family: 'Yesteryear',serif;
 		color: #F9f9f9;
 	}
 	.navbar-nav > a:hover{
@@ -77,15 +81,10 @@
 		<div class="row" style="margin-top: 10%;
 ">
 			<div class="col-md-12" style="text-align:center;">
-				<!-- FontAwsome -->
+
 			
 				<span style="color:yellow"  class="fa fa-lightbulb-o fa-5x" data-xrange="140" data-yrange="160"></span>
-				<!-- End Fontawsome -->
-				<!-- Plax -->
-				<!-- <img class="plax_img_1" style="height:150px;" src="images/web.png" data-xrange="40" data-yrange="60">
-				<img class="plax_img_2" style="height:150px;" src="images/robot.png" data-xrange="20" data-yrange="20">
-				<img class="plax_img_3" style="height:150px;" src="images/lion.png" data-xrange="10" data-yrange="10" data-invert="true"> -->
-<!-- End plax -->
+
 				<h1 class="rs-h1">Hi, I'm Sarath! </h1>
 				<h3 class="rs-h3" title="Web Developer">{ Web Developer }</h3>
 				<h3 class="rs-h3" title="I Love finding bugs and compromising security of computers, websites and network.">&lt Hacker &gt;</h3>
@@ -109,24 +108,7 @@
 <script type="text/javascript" src="js/vendor/jquery.fittext.js"></script>
 <script type="text/javascript" src="js/vendor/jquery.backstretch.js"></script>
 <script type="text/javascript">
-	
-    //setTimeout(function() { /*$('.fade').removeClass('out');*/ }, 1000);
-
-
-
-	$(function(){
-		// $('img').plaxify()
-		$('.fa').plaxify()
-		$.plax.enable()
-
-		// Fittext
-		$(".rs-h1").fitText(1.2,{ minFontSize: '20px', maxFontSize: '40px' });
-		$(".rs-h3").fitText(2.2,{ minFontSize: '20px', maxFontSize: '32px'});
-		$.backstretch('images/blur_green.jpg');
-
-		//Done nProgress
-		NProgress.done();
-	
+$(function(){$('.fa').plaxify();$.plax.enable();$(".rs-h1").fitText(1.2,{ minFontSize: '20px', maxFontSize: '40px' });$(".rs-h3").fitText(2.2,{ minFontSize: '20px', maxFontSize: '32px'});$.backstretch('images/blur_green.jpg');NProgress.done();
 	});
 </script>
 </html>
