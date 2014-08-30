@@ -32,11 +32,11 @@ require.config({
 	paths:{
 		jquery:'js/jquery',
 		collapse:'js/collapse',
-		plax:'js/vendor/plax',
+		plax:'js/plax',
 		transition:'js/transition',
-		backstretch:'js/vendor/jquery.backstretch',
-		fittext:'js/vendor/jquery.fittext',
-		nprogress:'js/vendor/nprogress'
+		backstretch:'js/jquery.backstretch',
+		fittext:'js/jquery.fittext',
+		nprogress:'js/nprogress'
 	}
 });
 require(['jquery','collapse','backstretch','plax','fittext','nprogress'],function($,col,back,plax,fit,nprogress){
