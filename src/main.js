@@ -44,18 +44,22 @@ require(['jquery','collapse','backstretch','plax','fittext','nprogress'],functio
 	//alert('Whoops');
 
 	$(document).ready(function(){
+	nprogress.set(0.2); 
 	//Document ready state
 
 		
 	$.backstretch('images/blur_green.jpg');
+	nprogress.set(0.6); 
 	$('.fa').plaxify();
 	$.plax.enable();
-	
+	nprogress.set(0.8); 
 	//Fittext Plugin
 	$(".rs-h1").fitText(1.2,{ minFontSize: '20px', maxFontSize: '40px' });
 	$(".rs-h3").fitText(2.2,{ minFontSize: '20px', maxFontSize: '32px'});
+	//nprogress.set(1.0); 
 	//Back Struch Plugin
-	nprogress.done();
+	//nprogress.done();
 	//End Document Ready
+	setInterval(function(){nprogress.done();},1200);
 	});
 });
