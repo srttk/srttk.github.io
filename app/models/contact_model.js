@@ -24,11 +24,7 @@ define(['backbone'],function(Backbone){
 			if(attr.phone.length==0){
 				return "Please enter phone";
 			}
-			//Check phone format
-			if(! /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)6((\s|\s?\-\s?)?[0-9]){8}$/.test(attr.phone))
-			{
-				return "Invalid Phone Number";
-			}
+			
 			if(attr.note.length==0){
 				return "Please enter message";
 			}
