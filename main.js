@@ -64,7 +64,7 @@ require.config({
 });
 require(['jquery','routes','backstretch','collapse'],function($,AppRouter,Backstretch){
 	$.backstretch('images/blur_green.jpg');
-	$.backstretch('images/waves.gif');
+	// $.backstretch('images/waves.gif');
 
 	$(document).ready(function(){
 		var app=new AppRouter();
