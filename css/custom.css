@@ -1,1 +1,60 @@
-html{position:relative;min-height:100%;}body{background-image:url('../images/blur_green.jpg');margin-bottom:50px;}.footer{color:#cfcfcf;padding:5px 2px;position:absolute;bottom:0;height:50px;}.icon-bar{background-color:#fff;}.navbar-brand{font-family:'Lobster';color:#F9f9f9;}.navbar-nav > a:hover{background-color:#000;}.my-message{background-color:rgba(177,207,240,0.22);padding:8px;max-width:62%;position:relative;left:18%;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;}
+		html {
+  position: relative;
+  min-height: 100%;
+}
+
+	body{
+		background-color: rgba(161, 230, 16, 0.34);
+		background-image: url('../images/waves.gif');
+		margin-bottom: 50px;
+
+	}
+	.footer{
+		/*background-color: rgba(15, 1, 3, 0.72); */
+		color: #cfcfcf;
+		padding: 5px 2px;
+		position:absolute;
+		bottom: 0;
+		height: 50px;
+	}
+	.icon-bar{
+		background-color:#fff;
+	}
+	.navbar-brand{
+		/*font-family: 'Lobster';*/
+		/*color: #F9f9f9;*/
+
+
+	}
+	.navbar-brand h2{
+		margin-top: 0%;
+	}
+	.nav>li>a:hover{
+		background-color: rgba(105, 89, 5, 0.22);
+	}
+	.my-message{
+		background-color: rgba(177, 207, 240, 0.22);
+		padding: 8px;
+		max-width: 62%;
+		position: relative;
+		left: 18%;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		border-radius: 5px;
+	}
+	.service-box{
+		background-color: rgba(177, 207, 240, 0.22);
+		padding: 8px;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		border-radius: 5px;
+	}
+	.blue-tr-border{
+		border-bottom: 1px solid  rgba(177, 207, 240, 0.22) !important;
+		style="margin: 0px 0 20px !important;
+	}
+	.service-img{
+		height: 60px;
+	}
