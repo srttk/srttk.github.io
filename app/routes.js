@@ -17,7 +17,7 @@ define(['backbone','Modernizr','models/contact_model',
 		},
 		initialize:function(){
 			this.contact=new ContactModel();
-			this.contact.urlRoot="server/api/contacts/";
+			this.contact.urlRoot="http://saratonite/aws.af.cm/server/api/contacts/";
 			this.homeview=new HomeView();
 
 			
