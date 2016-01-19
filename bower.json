@@ -1,0 +1,22 @@
+{
+  "name": "Saratonite.github.io",
+  "description": "My github page",
+  "main": "index.html",
+  "authors": [
+    "Sarath <sarath.hacks@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/saratonite/saratonite.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "vue": "~1.0.15"
+  }
+}

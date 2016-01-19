@@ -1,0 +1,43 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	background:#8e44ad;
+}
+.wrapper{
+	width:70%;
+	margin:10px auto;
+	color:#fefefe;
+}
+
+.top-header{
+	nav{
+		background:#fefefe;
+		padding:15px;
+		float: right;
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0 0;
+			width:100%;
+			li{
+				width: 100%;
+				background:#fefefe;
+				margin: 0;
+				padding: 15px 15px 10px 15px;
+				display: inline;
+				//border-bottom: 5px solid #f56;
+				a{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.main-content{
+	margin-top:20px;
+	clear:both;
+	background:#9b59b6;
+	padding:15px;
+}
