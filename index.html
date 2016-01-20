@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sarath :: Web Developer</title>
-	<link rel="stylesheet" href="css/app.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
 	<!-- endbower -->
@@ -13,7 +13,7 @@
  	<!-- endinject -->
 </head>
 <body>
-	<div class="container">
+	<div class="container" id="app">
 	<!-- Header -->
 	<header class="top-header">
 		<nav class="navbar ">
@@ -26,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">&lt;sarath&gt;</a>
+      <a class="navbar-brand" href="#">&lt;/sarath&gt;</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +34,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">HOME</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#contact" v-link="{path:'/contact'}">CONTACT</a></li>
         <li><a href="#">RESUME</a></li>
         <li><a href="#">GITHUB</a></li>
 
@@ -51,7 +51,8 @@
 I love the web. I hope that you like too.</p>
 		<p class="note">If you've got a problem that you want me to solve, then contact me. Interesting cases only please.</p>
 		<!-- Experiments -->
-			
+			<p>{{pageTitle}}</p>
+			<router-view class="test" v-transition="test" >Vue</router-view>
 		<!-- Experiments -->
 	</section>
 	<!-- End Section -->
@@ -71,6 +72,7 @@ I love the web. I hope that you like too.</p>
 	<script src="bower_components/vue/dist/vue.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+	<script src="bower_components/vue-router/dist/vue-router.js"></script>
 	<!-- endbower -->
 
 	<!-- inject:js -->
