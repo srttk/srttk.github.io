@@ -1,11 +1,14 @@
+@import "variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "theme";
+
 
 
 *{
 	box-sizing:border-box;
 }
 
-$themeBg:#2ecc71;
+$themeBg:#fff;
 $contentBg:rgba(39, 174, 96,1.0);
 
 
