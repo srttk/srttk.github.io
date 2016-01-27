@@ -26,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">&lt;/sarath&gt;</a>
+      <a class="navbar-brand logo-text" href="#">&lt;/sarath&gt;</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,10 +46,6 @@
 	<!-- End Header -->
 	<!-- Section -->
 	<section class="container">
-		<h1>Hey i'm Sarath</h1>
-		<p>I build web based software that makes it easy to connect, share, explore and fun.
-I love the web. I hope that you like too.</p>
-		<p class="note">If you've got a problem that you want me to solve, then contact me. Interesting cases only please.</p>
 		<!-- Experiments -->
 			<p>{{pageTitle}}</p>
 			<router-view class="test" v-transition="test" >Vue</router-view>
@@ -67,6 +63,54 @@ I love the web. I hope that you like too.</p>
           </div>
 	</footer>
 	<!-- End Footer -->
+
+	<!-- [Templates] -->
+	<script type="vue/template" id="tpl-home">
+	<div class="home-conatiner">
+	<h1>Hey i'm Sarath</h1>
+		<p>I build web based software that makes it easy to connect, share, explore and fun.
+		I love the web. I hope that you like too.</p>
+		<p class="note">If you've got a problem that you want me to solve, then contact me. Interesting cases only please.</p>
+	</div>
+	</script>
+	<script type="vue/template" id="tpl-contact">
+
+	<h2>Contact Me</h2>
+		<form action="" class="form-horizontal col-md-5">
+	<div class="form-group">
+		<label for="" class="col-md-3 control-label">Name</label>
+		<div class="col-md-9">
+			<input type="text" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-md-3 control-label	">Email</label>
+		<div class="col-md-9">
+			<input type="email" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-md-3 control-label	">Phone</label>
+		<div class="col-md-9">
+			<input type="text" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-md-3 control-label	">Location</label>
+		<div class="col-md-9">
+			<input type="text" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		
+		<div class="col-md-9 col-md-offset-3">
+			<button class="btn btn-success">Send</button>
+		</div>
+	</div>
+</form>
+	</script>
+
+	<!-- [Templates] -->
 
 	<!-- bower:js -->
 	<script src="bower_components/vue/dist/vue.js"></script>

@@ -1,9 +1,14 @@
 (function(){
 	console.log('Hai ');
 
-	// Creating components
+	// 
+	var Home = Vue.extend({
+		template:$("#tpl-home").html()
+
+	});
+
 	var Contact = Vue.extend({
-    template: '<p>This is c!ontact page</p>'
+    template: $("#tpl-contact").html()
 	});
 
 	// Creating router
@@ -13,8 +18,8 @@
     '/contact': {
         component: Contact
     },
-    '/home': {
-        component: Contact
+    '/': {
+        component: Home
     }
 	});
 

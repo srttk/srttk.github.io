@@ -8,18 +8,36 @@
 	box-sizing:border-box;
 }
 
-$themeBg:#fff;
+$themeBg:#763568;
 $contentBg:rgba(39, 174, 96,1.0);
-
+$primaryText:#FDE3A7;
 
 body{
 	background-color:$themeBg;
 	font-family: 'Lato', sans-serif;
+	color:$primaryText;
+}
+h1,h2,h3{
+	color:$primaryText;
+}
+.home-conatiner{
+	margin : 5px auto;
+	text-align:center;
+	padding:10% 3%;
 }
 
 .navbar-brand{
 	    font-size: 2.5em ;
 	    font-family: 'Lato', sans-serif;
+}
+.logo-text{
+	color:$primaryText;
+	&:link{
+		color: $primaryText;
+	}
+	&:hover{
+		color:gold;
+	}
 }
 
 p{
@@ -28,6 +46,7 @@ p{
 }
 
 .test {
+	min-height:500px;
   transition: all 2s ease;
 
 }
