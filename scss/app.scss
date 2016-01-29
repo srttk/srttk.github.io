@@ -9,7 +9,7 @@
 }
 
 $themeBg:#763568;
-$contentBg:rgba(39, 174, 96,1.0);
+$contentBg:rgba(138, 102, 144, 0.28);
 $primaryText:#FDE3A7;
 
 body{
@@ -38,6 +38,21 @@ h1,h2,h3{
 	&:hover{
 		color:gold;
 	}
+}
+.primaryNav{
+	background-color:$contentBg;
+	border-radius:0px 0px 10px 10px;
+	li:first-child{
+		a{
+			border-radius:0px 0px 0px 10px;
+		}
+	}
+	li:last-child{
+		a{
+			border-radius:0px 0px 10px 0px;
+		}
+	}
+
 }
 
 p{

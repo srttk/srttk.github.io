@@ -6168,6 +6168,17 @@ h1, h2, h3 {
   .logo-text:hover {
     color: gold; }
 
+.primaryNav {
+  background-color: rgba(138, 102, 144, 0.28);
+  border-radius: 0px 0px 10px 10px; }
+  .primaryNav li:first-child a {
+    border-radius: 0px 0px 0px 10px; }
+  .primaryNav li:last-child a {
+    border-radius: 0px 0px 10px 0px; }
+  @media (max-width: 766px) {
+    .primaryNav li {
+      display: none; } }
+
 p {
   font-size: 1.2em; }
 
