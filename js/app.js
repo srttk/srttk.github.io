@@ -15,6 +15,10 @@
 		template:$("#tpl-projects").html()
 	});
 
+	var Tools = Vue.extend({
+		template:$("#tpl-tools").html()
+	});
+
 	// Creating router
 	var router = new VueRouter();
 
@@ -27,6 +31,9 @@
     },
     '/projects':{
     	component:Projects
+    },
+    '/tools':{
+    	component:Tools
     }
 	});
 

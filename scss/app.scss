@@ -18,12 +18,13 @@ body{
 	color:$primaryText;
 }
 h1,h2,h3{
-	color:$primaryText;
+	//color:$primaryText;
 }
 .home-conatiner{
 	margin : 5px auto;
 	text-align:center;
 	padding:10% 3%;
+
 }
 
 .navbar-brand{
@@ -32,11 +33,14 @@ h1,h2,h3{
 }
 .logo-text{
 	color:$primaryText;
+	background-color:$contentBg;
+	border-radius:0px 0px 10px 10px;
 	&:link{
 		color: $primaryText;
 	}
 	&:hover{
 		color:gold;
+		background-color:rgba(100, 100, 100, 0.28);
 	}
 }
 .primaryNav{
@@ -53,6 +57,15 @@ h1,h2,h3{
 		}
 	}
 
+}
+
+// Thumbnails on tools
+.thumbnail{
+	img{
+		min-height: 150px;
+		max-height: 150px;
+		text-align: center;
+	}
 }
 
 p{

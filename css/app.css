@@ -6149,9 +6149,6 @@ body {
   font-family: 'Lato', sans-serif;
   color: #FDE3A7; }
 
-h1, h2, h3 {
-  color: #FDE3A7; }
-
 .home-conatiner {
   margin: 5px auto;
   text-align: center;
@@ -6162,11 +6159,14 @@ h1, h2, h3 {
   font-family: 'Lato', sans-serif; }
 
 .logo-text {
-  color: #FDE3A7; }
+  color: #FDE3A7;
+  background-color: rgba(138, 102, 144, 0.28);
+  border-radius: 0px 0px 10px 10px; }
   .logo-text:link {
     color: #FDE3A7; }
   .logo-text:hover {
-    color: gold; }
+    color: gold;
+    background-color: rgba(100, 100, 100, 0.28); }
 
 .primaryNav {
   background-color: rgba(138, 102, 144, 0.28);
@@ -6175,9 +6175,11 @@ h1, h2, h3 {
     border-radius: 0px 0px 0px 10px; }
   .primaryNav li:last-child a {
     border-radius: 0px 0px 10px 0px; }
-  @media (max-width: 766px) {
-    .primaryNav li {
-      display: none; } }
+
+.thumbnail img {
+  min-height: 150px;
+  max-height: 150px;
+  text-align: center; }
 
 p {
   font-size: 1.2em; }
