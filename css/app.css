@@ -6144,10 +6144,29 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
 * {
   box-sizing: border-box; }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
   background-color: #763568;
   font-family: 'Lato', sans-serif;
-  color: #FDE3A7; }
+  color: #FDE3A7;
+  margin-bottom: 60px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: rgba(138, 102, 144, 0.28); }
+  .footer .container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px; }
+  .footer .container .text-muted {
+    margin: 20px 0; }
 
 .home-conatiner {
   margin: 5px auto;

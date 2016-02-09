@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -43,6 +44,7 @@ gulp.task('script',function(){
 
  gulp.task('sass', function() {
    gulp.src('./scss/*.scss')
+    .pipe(plumber())
     .pipe(sass())
      .pipe(autoprefixer())
       .pipe(gulp.dest('css'))

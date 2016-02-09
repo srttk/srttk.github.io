@@ -7,6 +7,10 @@
 *{
 	box-sizing:border-box;
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 $themeBg:#763568;
 $contentBg:rgba(138, 102, 144, 0.28);
@@ -16,7 +20,10 @@ body{
 	background-color:$themeBg;
 	font-family: 'Lato', sans-serif;
 	color:$primaryText;
+	  margin-bottom: 60px;
 }
+@import "footer";
+
 h1,h2,h3{
 	//color:$primaryText;
 }
