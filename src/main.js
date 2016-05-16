@@ -1,8 +1,39 @@
 import Vue from 'vue'
-import App from './App'
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
+import VueRouter from 'vue-router'
+import VueValidator from 'vue-validator'
+
+
+import NavPublic from './components/nav-public'
+
+// Pages
+import HomePage from './pages/Home'
+import ContactPage from './pages/Contact'
+
+var style = require('../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
+
+
+Vue.use(VueRouter)
+Vue.use(VueValidator)
+
+var router = new VueRouter();
+
+
+router.map({
+    '/': {
+        component: HomePage
+    },
+    '/contact':{
+    	component:ContactPage
+    }
 })
+
+
+var app =  Vue.extend({
+	components:{
+		'nav-public':NavPublic
+	}
+});
+
+router.start(app,'#app')
+/* eslint-disable no-new */
