@@ -10,7 +10,9 @@ import NavPublic from './components/nav-public'
 import HomePage from './pages/Home'
 import ContactPage from './pages/Contact'
 
-var style = require('../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
+//var style = require('../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
+
+var appStyle = require('./scss/app.scss');
 
 
 Vue.use(VueRouter)
