@@ -12,6 +12,8 @@ import ContactPage from './pages/Contact'
 
 //var style = require('../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
 
+//var btsCollapse = require('../node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse');
+
 var appStyle = require('./scss/app.scss');
 
 
