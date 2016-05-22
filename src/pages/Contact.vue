@@ -2,26 +2,24 @@
 	<div class="row">
 		<h1>Contact Me</h1>
 		<div class="col-md-5">
-			<validator name="validation1">
+			<validator name="validation1" v-if="!formSubmitted">
 			<form class="form-horizontal" novalidate>
 				<div class="form-group">
 					<label for="" class="col-md-4 control-label">Name</label>
 					<div class="col-md-8">
 						<input type="text" class="form-control" v-model="contact.name" v-validate:name="{ required: true, minlength: 3 }">
-						<span v-if="$validation1.name.required" class="help-block">Name required</span>
-						<span v-if="$validation1.name.minlength" class="help-block">Name at least 3 characters long?</span>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="" class="col-md-4 control-label" >Email</label>
 					<div class="col-md-8">
-						<input type="email" class="form-control" v-model="contact.email">
+						<input type="email" class="form-control" v-model="contact.email" v-validate:email="{required:true}">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="" class="col-md-4 control-label">Phone</label>
 					<div class="col-md-8">
-						<input type="text" class="form-control" v-model="contact.phone">
+						<input type="text" class="form-control" v-model="contact.phone" vue-validate:phone="{required:true}">
 					</div>
 				</div>
 				<div class="form-group">
@@ -36,7 +34,7 @@
 					<div class="col-md-8 col-md-offset-4">
 
 
-							<button class="btn btn-block btn-success" v-on:click="sendContact">Send</button>
+							<button class="btn btn-block btn-success" v-on:click="sendContact" :disabled="!$validation1.valid">SUBMIT</button>
 
 
 					</div>
@@ -44,10 +42,11 @@
 
 			</form>
 			</validator>
+			<div v-else>
+				<h2 class="alert alert-success">Thanks :)</h2>
+			</div>
 		</div>
 		<div class="col-md-7">
-
-			{{contact | json}}
 
 		</div>
 	</div>
@@ -82,11 +81,12 @@ var firebase = require('firebase');
 			return {
 
 				contact:{
-					name:"Sarath",
-					email:"sarath@moovooz.com",
-					phone:"9495504504",
-					message:"Hello"
-				}
+					name:"",
+					email:"",
+					phone:"",
+					message:"",
+				},
+				formSubmitted:false
 
 			};
 
@@ -107,6 +107,8 @@ var firebase = require('firebase');
 					.then(function(data){
 						console.log(data);
 						tnotify.show('Well Done!', 'You just submit your details successfuly.', 'success', '', 3000);
+
+						self.formSubmitted =true;
 
 						self.resetForm();
 					});
