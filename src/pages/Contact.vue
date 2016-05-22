@@ -32,12 +32,12 @@
 				</div>
 
 				<div class="form-group">
-					
+
 					<div class="col-md-8 col-md-offset-4">
 
-						
+
 							<button class="btn btn-block btn-success" v-on:click="sendContact">Send</button>
-						
+
 
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 		<div class="col-md-7">
 
 			{{contact | json}}
-			
+
 		</div>
 	</div>
 </template>
@@ -72,8 +72,8 @@ var firebase = require('firebase');
 
   var contactInterest = fdb.ref('contacts');
 
-  var tnotify = require('../util/notifier/dist/js/notifier.min');
-  var tnotifyCss = require('../util/notifier/dist/css/notifier.min.css');
+  var tnotify = require('../util/notifier/js/notifier.min');
+  var tnotifyCss = require('../util/notifier/css/notifier.min.css');
 
 
 	export default {
@@ -92,7 +92,7 @@ var firebase = require('firebase');
 
 		},
 		ready(){
-			tnotify.show('Hello!' , 'I am a default notification.', '', '', 0);
+
 		},
 		methods:{
 			sayHello(e){
@@ -107,7 +107,7 @@ var firebase = require('firebase');
 					.then(function(data){
 						console.log(data);
 						tnotify.show('Well Done!', 'You just submit your details successfuly.', 'success', '', 3000);
-						
+
 						self.resetForm();
 					});
 

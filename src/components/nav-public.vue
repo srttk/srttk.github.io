@@ -29,7 +29,9 @@
 </nav>
 </template>
 <script>
-	
+
+var collapse = "../../node_modules/bootstrap-sass/assets/javascript/bootstrap";
+
 	export default{
 
 	}
