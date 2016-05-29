@@ -2,6 +2,9 @@
 	<div class="row">
 		<h1>Contact Me</h1>
 		<div class="col-md-5">
+			<p>
+				If you need assistance, contact me and we'll discuss its potential.<suo>*</suo>
+			</p>
 			<validator name="validation1" v-if="!formSubmitted">
 			<form class="form-horizontal" novalidate>
 				<div class="form-group">
@@ -47,6 +50,8 @@
 			</div>
 		</div>
 		<div class="col-md-7">
+
+			<blockquote>I'm not going to go into detail about how I do what I do because chances are you wouldn't understand. If you've got a problem that you want me to solve, then contact me. Interesting cases only please.</blockquote>
 
 		</div>
 	</div>
