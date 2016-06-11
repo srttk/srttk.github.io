@@ -65,6 +65,9 @@
 
 <script>
 
+var Helpers = require('../util/helpers').default;
+console.log(Helpers);
+
 var firebase = require('firebase');
 
  // Initialize Firebase
@@ -98,6 +101,8 @@ var firebase = require('firebase');
 		},
 		ready(){
 
+	  	Helpers.setDocumentTitle("Saratonite :: Contact Me :)")
+
 		},
 		methods:{
 			sayHello(e){
@@ -111,7 +116,7 @@ var firebase = require('firebase');
 
 					.then(function(data){
 						console.log(data);
-						tnotify.show('Well Done!', 'You just submit your details successfuly.', 'success', '', 3000);
+						tnotify.show('Thank You!', 'You just submit your details successfuly.', 'success', '', 3000);
 
 						self.formSubmitted =true;
 

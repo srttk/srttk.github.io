@@ -7,7 +7,15 @@ I love the web. I hope that you like too.</p>
 </template>
 
 <script>
+
+var Helpers = require('../util/helpers').default;
+
+
 	export default{
+
+		ready(){
+			Helpers.setDocumentTitle("Saratonite :: Fullstack Developer :)");
+		}
 
 	}
 </script>
