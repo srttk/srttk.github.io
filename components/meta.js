@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import { YELLOW } from '../config/colors'
 export default ({ title }) => (
     <div>
     <Head>
@@ -17,10 +17,19 @@ export default ({ title }) => (
       html {
         height: 100%;
       }
+
+      
       body { 
-        font: 16px menlo;
+        font: 18px menlo;
         font-family: Inconsolata,monospace;
         height:100%;
+      }
+      ::-moz-selection { /* Code for Firefox */
+          background: yellow;
+      }
+      
+      ::selection {
+          background: ${YELLOW};
       }
       .app {
         display: flex;
