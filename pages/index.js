@@ -1,10 +1,12 @@
 import React from 'react'
 import Meta from '../components/meta'
 import Screen from '../components/screen'
+import Navigation from '../components/navigation'
 import classnames from 'classnames'
 import fetch from 'isomorphic-fetch'
 
 import { YELLOW, PURPLE } from '../config/colors'
+import consoleBanner from '../config/banner'
 export default class Index extends React.Component {
 
     constructor(props) {
@@ -28,6 +30,9 @@ export default class Index extends React.Component {
     }
 
     componentDidMount() {
+        // Console Banner
+
+        console.log(consoleBanner)
 
         this.timeOut = setTimeout(()=> {
 
@@ -50,6 +55,7 @@ export default class Index extends React.Component {
         <div>
             <Meta title="Saraths Github Page"/>
             <Screen>
+                <Navigation/>
                 <div className="flash-page">
                     <div style={{width:'6em'}}>
                     <img className={classnames({"img-avatar": true,"animated bounce": this.state.animateAvatar })}  src="/static/sarath-avatarsticker.png"/>  
@@ -69,6 +75,10 @@ export default class Index extends React.Component {
                     justify-content: center;
                     align-items: center;
                     height: 100vh;
+                    position: absolute;
+                    top:0;
+                    width:100%;
+                    z-index:-1;
                     }
 
                     .img-avatar {
