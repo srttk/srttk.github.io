@@ -52,13 +52,12 @@ export default class Index extends React.Component {
     render()
     {
      return (
-        <div>
-            <Meta title="Saraths Github Page"/>
-            <Screen>
+         <Screen>
+         <Meta title="Saraths Github Page"/>
                 <Navigation/>
-                <div className="flash-page">
-                    <div style={{width:'6em'}}>
-                    <img className={classnames({"img-avatar": true,"animated bounce": this.state.animateAvatar })}  src="/static/sarath-avatarsticker.png"/>  
+                <div>
+                    <div style={{width:'6em',marginTop:'2em'}}>
+                        <img className={classnames({"img-avatar": true,"animated bounce": this.state.animateAvatar })}  src="/static/sarath-avatarsticker.png"/>  
                     </div>
                 
                     <h1 className={classnames("main-title")}> > Hey, I'm Sarath</h1>
@@ -68,18 +67,6 @@ export default class Index extends React.Component {
 
 
                     <style jsx>{`
-                    .flash-page {
-                    display:flex;
-                    flex-direction: column;
-                    flex-grow: 1;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh;
-                    position: absolute;
-                    top:0;
-                    width:100%;
-                    z-index:-1;
-                    }
 
                     .img-avatar {
                         width: 100%;
@@ -129,8 +116,6 @@ export default class Index extends React.Component {
                 `}</style>
                 </div>
             </Screen>
-            
-        </div>
     )
     }
 }

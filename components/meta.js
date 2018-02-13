@@ -6,7 +6,7 @@ export default ({ title }) => (
       <title>{ title }</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
-      <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     </Head>
     <style jsx global>{`
      *{
@@ -21,7 +21,7 @@ export default ({ title }) => (
       
       body { 
         font: 18px menlo;
-        font-family: Inconsolata,monospace;
+        font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
         height:100%;
       }
       ::-moz-selection { /* Code for Firefox */
