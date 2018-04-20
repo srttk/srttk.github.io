@@ -1,6 +1,6 @@
 import Link  from 'next/link'
 import { PURPLE, BLACK } from '../config/colors'
-export default () => (
+export default (props) => console.log('>',props) || (
     <nav>
         <div className="logo"> > SARATH</div>
         <div className="right-nav">
@@ -35,9 +35,13 @@ export default () => (
                 padding: 2px 10px;
                 text-transform: uppercase;
                 font-size: 15px;
+                border-bottom: 2px solid #fff;
             }
             a:last-child {
                 padding: 2px 0px 2px 10px;
+            }
+            a:hover, a:active {
+                border-bottom: 2px solid ${PURPLE};
             }
             `
         }
