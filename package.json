@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "export": "npm run build && next export && npm run copy",
     "copy": "cp ./.gitignore ./out/ "
@@ -14,8 +14,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^4.1.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "next": "^5.1.0",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "@zeit/next-sass": "^0.1.2"
   }
 }
