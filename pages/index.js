@@ -61,16 +61,18 @@ export default class Index extends React.Component {
                         <p className="sub-title">{ this.props.user.bio }</p>
 
                         <div className="contact__box">
-                            <a href="https://github.com/saratonite">Github</a> / &nbsp;
-                            <a href="https://twitter.com/sarathtvmala">Twitter</a> / &nbsp;
-                            <a href="https://linkedin.com/in/sarath-k-0a614727">LinkedIn</a> / &nbsp;
-                            <a href="https://saratonite.github.io/resume">Resume</a>
+                            <a target="_blank" href="https://github.com/saratonite?utm_source=sarath.tk">Github</a> / &nbsp;
+                            <a target="_blank" href="https://twitter.com/sarathtvmala?utm_source=sarath.tk">Twitter</a> / &nbsp;
+                            <a target="_blank" href="https://linkedin.com/in/sarath-k-0a614727?utm_source=sarath.tk">LinkedIn</a> / &nbsp;
+                            <a target="_blank" href="https://saratonite.github.io/resume?utm_source=sarath.tk">Resume</a>
                         </div>
                     </header>
                     
                     
+                    
 
                 </div>
+                
             </Screen>
     )
     }
