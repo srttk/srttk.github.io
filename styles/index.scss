@@ -1,7 +1,66 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-html, body {
+html{
+ 
     font-family: 'Roboto', sans-serif;
+    color: #4e4e4e;
+    font-size: 10px;
 }
+
+
+
+body {
+    font-size: 180%;
+}
+
+h1 {
+   font-size: 380%;
+}
+.main-title {
+    font-weight: 200;
+}
+.sub-title {
+    font-size: 200%;
+    font-weight: 200;
+}
+
+a,a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    color: #572adc;
+    background: linear-gradient(40deg, #2812da 0%, #e82aa3 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+header {
+    padding: 15rem 5rem;
+    box-shadow: 0 5px 20px #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and(max-width: 1024px) {
+    html {
+        font-size: 8px;
+    }
+    header {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 6px;
+    }
+}
+// Pages
+@import './pages/_home.scss';

@@ -23,10 +23,10 @@ export default class Index extends React.Component {
     static async getInitialProps({req}) {
         //const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
 
-        var res =  await fetch(`https://api.github.com/users/saratonite`)
-        var user = await res.json()
-        user.bio = JSON.parse( JSON.stringify( user.bio ) )
-        return { user }
+        // var res =  await fetch(`https://api.github.com/users/saratonite`)
+        // var user = await res.json()
+        // user.bio = JSON.parse( JSON.stringify( user.bio ) )
+        return { user: {bio: '🔥 Aspiring rebel, Indie Hacker 😜'} }
     }
 
     componentDidMount() {
@@ -54,66 +54,22 @@ export default class Index extends React.Component {
      return (
          <Screen>
          <Meta title="Saraths Github Page"/>
-                <Navigation/>
-                <div>
-                    <div style={{width:'6em',marginTop:'2em'}}>
-                        <img className={classnames({"img-avatar": true,"animated bounce": this.state.animateAvatar })}  src="/static/sarath-avatarsticker.png"/>  
-                    </div>
-                
-                    <h1 className={classnames("main-title")}> > Hey, I'm Sarath</h1>
+                <div className="container">
+                    <header>
+                        <h1 className={classnames("main-title")}> > Hey, I'm Sarath</h1>
 
-                    <p>{ this.props.user.bio }</p>
+                        <p className="sub-title">{ this.props.user.bio }</p>
+
+                        <div className="contact__box">
+                            <a href="https://github.com/saratonite">Github</a> / &nbsp;
+                            <a href="https://twitter.com/sarathtvmala">Twitter</a> / &nbsp;
+                            <a href="https://linkedin.com/in/sarath-k-0a614727">LinkedIn</a> / &nbsp;
+                            <a href="https://saratonite.github.io/resume">Resume</a>
+                        </div>
+                    </header>
+                    
                     
 
-
-                    <style jsx>{`
-
-                    .img-avatar {
-                        width: 100%;
-                        height: auto;
-                    }
-                    .main-title {
-                        padding:5px;
-                        transition: background 1s ease;
-                        transition: color .5s ease;
-                    }
-                    .main-title:hover {
-
-                        background: ${YELLOW};
-
-                    }
-
-                    p {
-                        font-size: 1.2rem;
-                        padding:5px;
-                    }
-
-                    /**Animation */
-                    .animated { 
-                    
-                        -webkit-animation-duration: 1s;
-                        animation-duration: 1s; 
-                        -webkit-animation-fill-mode: both; 
-                        animation-fill-mode: both; 
-                    }
-                    
-                    @-webkit-keyframes bounce { 
-                        0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
-                        40% {-webkit-transform: translateY(-30px);} 
-                        60% {-webkit-transform: translateY(-15px);} 
-                    } 
-                    
-                    @keyframes bounce { 
-                        0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-                        40% {transform: translateY(-30px);} 
-                        60% {transform: translateY(-15px);} 
-                    }
-                    
-                    .bounce { 
-                        -webkit-animation-name: bounce; 
-                        animation-name: bounce; 
-                    }
-                `}</style>
                 </div>
             </Screen>
     )
