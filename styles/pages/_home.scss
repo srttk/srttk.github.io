@@ -20,6 +20,10 @@
 
 }
 
+.header__contact {
+    text-align: center;
+}
+
 //
 // Section
 
@@ -29,26 +33,34 @@
 
 .project__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
 }
 
 .project__item {
-   flex-basis: 30%;
+   flex-basis: 32.3%;
    border: 1px solid #ddd;
    padding: 5rem;
-   margin-top: 2rem;
+   margin-top: 1.5rem;
+   margin-left: 1.5rem;
    text-align: center;
    color: #efefef;
    border-radius: 3px;
    box-shadow: 0px 3px 10px #ddd;
    transition: all 0.2s ease-in-out;
+   a,a:link,a:visited {
+       color: #ddd;
+   }
+}
+
+.project__item:nth-child(3n+1), .project__item:first-child {  /* or 4n+1 */
+    margin-left: 0; 
 }
 
 .project__item:hover {
     transform: scale(1.02) translateY(-2px);
-    box-shadow: 0px 10px 10px #cecece;
+    box-shadow: 0px 10px 20px #cecece;
 }
 
 @media only screen and (max-width: $bp_tab) {

@@ -51,6 +51,11 @@ h3 {
 a,a:link, a:visited {
     color: black;
     text-decoration: none;
+
+}
+
+.bg__link--1 {
+
     color: #572adc;
     background: linear-gradient(40deg, #2812da 0%, #e82aa3 100%);
     background-size: cover;
@@ -58,6 +63,7 @@ a,a:link, a:visited {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+
 }
 
 header {
@@ -95,3 +101,4 @@ header {
 @import './pages/_home.scss';
 @import './_backgrounds.scss';
 @import './components/_ribbon.scss';
+@import './_forms.scss';
