@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+@import './_variables.scss';
 html{
  
     font-family: 'Roboto', sans-serif;
@@ -14,10 +16,21 @@ html{
 
 body {
     font-size: 180%;
+    overflow-x: hidden;
 }
 
 h1 {
    font-size: 380%;
+}
+
+h2 {
+    font-size: 240%;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight: 200;
 }
 .main-title {
     font-weight: 200;
@@ -25,6 +38,14 @@ h1 {
 .sub-title {
     font-size: 200%;
     font-weight: 200;
+}
+.text__small {
+    font-size:60%;
+    font-weight: 400;
+    color: #cecece;
+}
+.margin__top--small {
+    margin-top: 1rem;
 }
 
 a,a:link, a:visited {
@@ -41,28 +62,36 @@ a,a:link, a:visited {
 
 header {
     padding: 15rem 5rem;
-    box-shadow: 0 5px 20px #ddd;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1024px;
+    margin-top: 5rem;
+
+    .hero__area {
+        width: 100%;
+        text-align: center;
+    }
 }
+
+
 
 @media only screen and(max-width: 1024px) {
     html {
         font-size: 6px;
     }
     header {
-        width: 80%;
+        width: 100%;
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: $bp_mobile) {
     html {
         font-size: 4px;
+    }
+    header {
+        width: 100%;
     }
 }
 // Pages
 @import './pages/_home.scss';
+@import './_backgrounds.scss';
+@import './components/_ribbon.scss';
