@@ -5,7 +5,7 @@
 }
 
 .container {
-    max-width: 1024px;
+    max-width: $max-width;
     margin: 0 auto;
     overflow: hidden;
 
@@ -77,5 +77,12 @@
     .project__item {
         flex-basis: 100%;
         font-size: 5rem;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: $max-width) {
+    .container {
+        padding: 1rem;
     }
 }

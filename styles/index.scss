@@ -80,9 +80,9 @@ header {
 
 
 
-@media only screen and(max-width: 1024px) {
+@media only screen and(max-width: $max-width) {
     html {
-        font-size: 6px;
+        font-size: 7px;
     }
     header {
         width: 100%;
