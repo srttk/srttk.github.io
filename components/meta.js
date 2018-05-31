@@ -8,5 +8,16 @@ export default ({ title }) => (
       <meta charSet="utf-8" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500" rel="stylesheet"/>
       <link rel="stylesheet" href="/_next/static/style.css" />
+
+     
+      {/*  <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36053418-5"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-36053418-5');
+      </script>
     </Head>
 )
