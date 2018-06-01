@@ -1,7 +1,7 @@
 import React from 'react'
 import Meta from '../components/meta'
 import Screen from '../components/screen'
-import Navigation from '../components/navigation'
+import Ribbon from '../components/ribbon'
 import classnames from 'classnames'
 import fetch from 'isomorphic-fetch'
 
@@ -55,7 +55,7 @@ export default class Index extends React.Component {
          <Screen>
          <Meta title="Sarath's Home Page "/>
                 <div className="container">
-                    <div className="ribbon"></div>
+                   <Ribbon/>
                     <header>
                         <div className="hero__area">
                             <h1 className={classnames("main-title")}> > Hey, I'm Sarath</h1>
