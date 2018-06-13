@@ -82,14 +82,23 @@ export default class Index extends React.Component {
                             <div className="project__item bg__purple--pink">
                                 <h3><a target="_blank" href="http://airwaves.ml?utm_source=sarath.tk">Airwaves.ml</a></h3>
                                 <p className="text__small margin__top--small">2018</p>
+                                <div className="project__item--stack">
+                                    <span>React</span> / <span>Redux</span> / <span>Firebase</span>
+                                </div>
                             </div>
                             <div className="project__item bg__green--dream">
                                 <h3><a target="_blank" href="https://asciiartgen.now.sh?utm_source=sarath.tk">ASCII.ART.GENRATOR</a></h3>
                                 <p className="text__small margin__top--small">2017</p>
+                                <div className="project__item--stack">
+                                    <span>NodeJs</span> / <span>Express</span> 
+                                </div>
                             </div>
                             <div className="project__item bg__sky">
                                 <h3><a target="_blank" href="https://saratonite.github.io/book-search?utm_source=sarath.tk">BOOK SEARCH</a></h3>
                                 <p className="text__small margin__top--small">2014</p>
+                                <div className="project__item--stack">
+                                    <span>AngularJs 1.x</span>
+                                </div>
                             </div>
   
                             

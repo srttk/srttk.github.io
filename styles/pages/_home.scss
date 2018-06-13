@@ -52,6 +52,12 @@
    a,a:link,a:visited {
        color: #ddd;
    }
+
+   &--stack {
+       font-size: 1.2rem;
+       padding-top: 1rem;
+       color: #efefef;
+   }
 }
 
 .project__item:nth-child(3n+1), .project__item:first-child {  /* or 4n+1 */
