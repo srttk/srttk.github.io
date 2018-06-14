@@ -53,6 +53,7 @@ export default class Index extends React.Component {
     {
      return (
          <Screen>
+         <main>
          <Meta title="Sarath's Home Page "/>
                 <div className="container">
                    <Ribbon/>
@@ -111,7 +112,16 @@ export default class Index extends React.Component {
 
                 </div>
                 
+            </main>
+
+            <footer className="footer">
+                <div className="container">
+                &copy; 2018 Sarath, Dont copy me 😎   
+                </div>
+            </footer>
+
             </Screen>
+            
     )
     }
 }
