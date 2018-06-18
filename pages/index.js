@@ -2,6 +2,7 @@ import React from 'react'
 import Meta from '../components/meta'
 import Screen from '../components/screen'
 import Ribbon from '../components/ribbon'
+import Modal from '../components/modal';
 import classnames from 'classnames'
 import fetch from 'isomorphic-fetch'
 
@@ -17,6 +18,14 @@ export default class Index extends React.Component {
         }
 
         this.timeOut = null;
+
+        this.state = {
+            showContactModal: false
+        }
+
+        this.clickContactMe = this.clickContactMe.bind(this);
+
+        this.hideContactMe = this.hideContactMe.bind(this);
 
     }
 
@@ -49,6 +58,15 @@ export default class Index extends React.Component {
 
     }
 
+    clickContactMe() {
+        console.log('YYYYYYYEEEEPPPP')
+        this.setState({showContactModal: true});
+    }
+
+    hideContactMe() {
+        this.setState({ showContactModal: false});
+    }
+
     render()
     {
      return (
@@ -72,10 +90,31 @@ export default class Index extends React.Component {
                             <a target="_blank" className="bg__link--1" href="https://saratonite.github.io/resume?utm_source=sarath.tk">Resume</a>
                         </div>
                         <div className="header__contact">
-                            <button className="btn btn--big">CONTACT ME</button>
+                            <button className="btn btn--big" onClick={ this.clickContactMe }>CONTACT ME</button>
                         </div>
                     </header>
+                    <Modal title="Contact Me :)" closeModal={ this.hideContactMe } show={ this.state.showContactModal } >
+                        <form>
+                            <div className="form-goup">
+                                <label className="form__label block">Name</label>
+                                <input type="text" className="form__label block" />
+                            </div>
+                            <div className="form-goup">
+                                <label className="form__label block">Email</label>
+                                <input type="email" className="form__label block" />
+                            </div>
+                            <div className="form-goup">
+                                <label className="form__label block">Message</label>
+                               <textarea>
 
+                               </textarea>
+                            </div>
+                            <div>
+                                <button type="button" onClick={ this.hideContactMe } className="btn">Cancel</button>
+                                <button type="button" className="btn">Submit</button>
+                            </div>
+                        </form>
+                    </Modal>
                     <section className="section__projects">
                         <h2>Personal Projects</h2>
 

@@ -1,0 +1,92 @@
+html{
+ 
+    font-family: 'Roboto', sans-serif;
+    color: #4e4e4e;
+    font-size: 10px;
+}
+
+
+
+body {
+    font-size: 180%;
+    overflow-x: hidden;
+}
+
+h1 {
+   font-size: 380%;
+}
+
+h2 {
+    font-size: 240%;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight: 200;
+}
+.main-title {
+    font-weight: 200;
+}
+.sub-title {
+    font-size: 200%;
+    font-weight: 200;
+}
+.text__small {
+    font-size:60%;
+    font-weight: 400;
+    color: #cecece;
+}
+.margin__top--small {
+    margin-top: 1rem;
+}
+
+a,a:link, a:visited {
+    color: black;
+    text-decoration: none;
+
+}
+
+.bg__link--1 {
+
+    color: #572adc;
+    background: linear-gradient(40deg, #2812da 0%, #e82aa3 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+
+header {
+    padding: 15rem 5rem;
+    width: 100%;
+    max-width: $max-width;
+    margin-top: 5rem;
+
+    .hero__area {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+@media only screen and(max-width: $max-width) {
+    html {
+        font-size: 7px;
+    }
+    header {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: $bp_mobile) {
+    html {
+        font-size: 4px;
+    }
+    header {
+        width: 100%;
+    }
+}
