@@ -5,7 +5,8 @@ import Ribbon from '../components/ribbon'
 import Modal from '../components/modal';
 import ContactForm from '../components/forms/contactform';
 import classnames from 'classnames'
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch';
+import { getLocation } from '../api/browser-geolocation';
 
 import { YELLOW, PURPLE } from '../config/colors'
 import consoleBanner from '../config/banner'
@@ -15,7 +16,11 @@ export default class Index extends React.Component {
         super(props)
 
         this.state = {
-            animateAvatar: false
+            animateAvatar: false,
+            browserGeoLocation: {
+                latitude: null,
+                longitude: null
+            }
         }
 
         this.timeOut = null;
@@ -42,14 +47,20 @@ export default class Index extends React.Component {
     componentDidMount() {
         // Console Banner
 
-        console.log(consoleBanner)
+        console.log(consoleBanner);
 
-        this.timeOut = setTimeout(()=> {
+        let self = this;
 
-            this.setState({ animateAvatar: true});
-            clearTimeout(this.timeOut)
+        getLocation(function(position) {
 
-        },2000)
+            console.log(position);
+
+            self.setState({browserGeoLocation: {latitude:position.coords.latitude, longitude: position.coords.longitude}});
+
+            
+        })
+
+
 
         
 
@@ -94,7 +105,7 @@ export default class Index extends React.Component {
                         </div>
                     </header>
                     <Modal title="Contact Me :)" closeModal={ this.hideContactMe } show={ this.state.showContactModal } >
-                        <ContactForm handleCancel={ this.hideContactMe }/>
+                        <ContactForm handleCancel={ this.hideContactMe } browserGeoLocation={ this.state.browserGeoLocation }/>
                     </Modal>
                     <section className="section__projects">
                         <h2>Personal Projects</h2>

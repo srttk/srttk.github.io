@@ -27,14 +27,15 @@ export default class ContactForm extends Component {
     }
 
     handleSubmit(e) {
-        this.setState({isRequesting: true})
         e.preventDefault();
-
+        
         if(!this.state.contact.name.trim() || !this.state.contact.email.trim()) {
             return;
         }
+        
+        this.setState({isRequesting: true})
         let contact = this.state.contact;
-        contact = {...contact, createdAt: new Date() };
+        contact = {...contact, createdAt: new Date(), browserGeoLocation: this.props.browserGeoLocation };
 
         
        
