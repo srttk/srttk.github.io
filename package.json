@@ -8,6 +8,8 @@
     "start": "next start",
     "dev": "next",
     "build": "next build",
+    "pro-build": "npm run initconfig && npm run export",
+    "initconfig": "node ./scripts/build-config.js",
     "export": "npm run build && next export && npm run copy",
     "copy": "cp ./.gitignore ./out/ "
   },
