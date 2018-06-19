@@ -3,6 +3,7 @@ import Meta from '../components/meta'
 import Screen from '../components/screen'
 import Ribbon from '../components/ribbon'
 import Modal from '../components/modal';
+import ContactForm from '../components/forms/contactform';
 import classnames from 'classnames'
 import fetch from 'isomorphic-fetch'
 
@@ -94,26 +95,7 @@ export default class Index extends React.Component {
                         </div>
                     </header>
                     <Modal title="Contact Me :)" closeModal={ this.hideContactMe } show={ this.state.showContactModal } >
-                        <form>
-                            <div className="form-goup">
-                                <label className="form__label block">Name</label>
-                                <input type="text" className="form__label block" />
-                            </div>
-                            <div className="form-goup">
-                                <label className="form__label block">Email</label>
-                                <input type="email" className="form__label block" />
-                            </div>
-                            <div className="form-goup">
-                                <label className="form__label block">Message</label>
-                               <textarea>
-
-                               </textarea>
-                            </div>
-                            <div>
-                                <button type="button" onClick={ this.hideContactMe } className="btn">Cancel</button>
-                                <button type="button" className="btn">Submit</button>
-                            </div>
-                        </form>
+                        <ContactForm handleCancel={ this.hideContactMe }/>
                     </Modal>
                     <section className="section__projects">
                         <h2>Personal Projects</h2>

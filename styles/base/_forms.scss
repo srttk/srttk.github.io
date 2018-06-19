@@ -31,24 +31,29 @@ input[type="text"], input[type="email"], input[type="number"] , textarea {
     border-radius: 5px;
     outline: none;
     transition: transform 0.2s ease-in;
-    box-shadow: 0px 5px 10px #c8c8c8;
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
 
     &:hover {
         // transform: translateY(-1px);
-        box-shadow: 0px 3px 10px #c8c8c8;
+        box-shadow: 0px 3px 10px #eee;
     }
-    &.btn--big {
-        cursor: pointer;
-        padding: 2rem;
-        color: #fff;
-        font-size: 1.5rem;
-        border: 1px solid darken(#E100FF,5%);
-        background: #7F00FF;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 5px 10px 20px #c8c8c8;
-        }
+    
+}
+
+.btn--big {
+    cursor: pointer;
+    padding: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 1px solid darken(#E100FF,5%);
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 5px 10px 20px #c8c8c8;
     }
 }
