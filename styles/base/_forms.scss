@@ -17,6 +17,8 @@ input[type="text"], input[type="email"], input[type="number"] , textarea {
         box-shadow: 0px 2px 3px #ddd;
         outline: none;
     }
+
+    
 }
 
 .block {
@@ -43,6 +45,21 @@ input[type="text"], input[type="email"], input[type="number"] , textarea {
     &:disabled  {
         background-color: #e5e5e5;
         box-shadow: none;
+    }
+
+    &.btn-border {
+        border: 1px solid #673AB7;
+        color: #673AB7;
+        font-weight: 700;
+        &:hover {
+            // transform: translateY(-1px);
+            box-shadow: 0px 5px 10px #eee;
+        }
+
+        &.btn-border-danger {
+            border-color: #F44336;
+            color: #F44336;
+        }
     }
     
 }

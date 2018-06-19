@@ -53,7 +53,6 @@ export default class Index extends React.Component {
 
         getLocation(function(position) {
 
-            console.log(position);
 
             self.setState({browserGeoLocation: {latitude:position.coords.latitude, longitude: position.coords.longitude}});
 
@@ -104,7 +103,7 @@ export default class Index extends React.Component {
                             <button className="btn btn--big" onClick={ this.clickContactMe }>CONTACT ME</button>
                         </div>
                     </header>
-                    <Modal title="Contact Me :)" closeModal={ this.hideContactMe } show={ this.state.showContactModal } >
+                    <Modal title="Contact Me 😎" closeModal={ this.hideContactMe } show={ this.state.showContactModal } >
                         <ContactForm handleCancel={ this.hideContactMe } browserGeoLocation={ this.state.browserGeoLocation }/>
                     </Modal>
                     <section className="section__projects">

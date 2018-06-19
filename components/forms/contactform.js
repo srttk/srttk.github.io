@@ -66,8 +66,8 @@ export default class ContactForm extends Component {
                                <textarea name="message" onChange={ this.onContactInputChanges } value={this.state.contact.message}></textarea>
                             </div>
                             <div className="contact__footer">
-                                <button type="button" onClick={ this.props.handleCancel } className="btn">Cancel</button>
-                                <button type="submit" className="btn" disabled={ this.state.isRequesting }>Submit</button>
+                                <button type="submit" className="btn btn-border" disabled={ this.state.isRequesting }>😛 Submit </button>
+                                <button type="button" onClick={ this.props.handleCancel } className="btn btn-border btn-border-danger">😑 Cancel</button>
                             </div>
             </form>
         );
