@@ -60,7 +60,6 @@ export default class Index extends React.Component {
     }
 
     clickContactMe() {
-        console.log('YYYYYYYEEEEPPPP')
         this.setState({showContactModal: true});
     }
 

@@ -40,6 +40,10 @@ input[type="text"], input[type="email"], input[type="number"] , textarea {
         // transform: translateY(-1px);
         box-shadow: 0px 3px 10px #eee;
     }
+    &:disabled  {
+        background-color: #e5e5e5;
+        box-shadow: none;
+    }
     
 }
 

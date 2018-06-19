@@ -7,3 +7,7 @@ test/e2e/reports
 /dist/
 .next/
 /out/
+
+# Configs
+/config/firebase.config.js
+
