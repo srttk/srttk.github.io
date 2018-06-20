@@ -1,5 +1,5 @@
 const withSass = require('@zeit/next-sass');
-const githubAssetUrl = "https://raw.githubusercontent.com/saratonite/saratonite.github.io/30ffd095/";
+const githubAssetUrl = "https://cdn.rawgit.com/saratonite/saratonite.github.io/9db2ea2a/";
 
 const isProduction = true;
 
