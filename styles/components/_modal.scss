@@ -44,3 +44,11 @@
         padding: 1rem;
     }
 }
+
+@media only screen and (max-width: $bp_mobile) {
+    .modal { 
+
+        min-width: 300px;
+        width: 90%;
+    }
+}

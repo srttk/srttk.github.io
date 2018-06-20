@@ -84,9 +84,14 @@ header {
 
 @media only screen and (max-width: $bp_mobile) {
     html {
-        font-size: 4px;
+        font-size: 7px;
     }
     header {
         width: 100%;
+        padding: 10rem 3rem;
+    }
+
+    h1 {
+        font-size: 335%;
     }
 }

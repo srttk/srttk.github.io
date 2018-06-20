@@ -39,12 +39,13 @@
   
   @media  (max-width:$bp_mobile){
   .ribbon{
-    font-size:3.5rem;
-     padding: 15px;
-      width: 290px;
-      top: 10px;
-      right: -110px;
-      transform: rotate(45deg);
+    font-size: 1.7rem;
+    padding: 7px;
+    width: 215px;
+    top: 15px;
+    right: -15px;
+    transform: rotate(27deg);
+    text-align: center;
   }
   }
 
