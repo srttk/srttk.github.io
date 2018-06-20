@@ -12,7 +12,7 @@ export default ({ title }) => (
      
       {/*  <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36053418-5"></script>
-      <script dangerouslySetInnerHTML={{__html:`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-36053418-5');`}}/>
+      <script dangerouslySetInnerHTML={{__html:` var TrackCode = (window.location.host === 'sarath.tk'|| window.location.host === 'saratonite.netlify.com') ? 'UA-36053418-5' : 'UA-36053418-2';window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config',TrackCode);`}}/>
       
     </Head>
 )
