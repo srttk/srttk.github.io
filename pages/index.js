@@ -7,9 +7,10 @@ import ContactForm from '../components/forms/contactform';
 import classnames from 'classnames'
 import fetch from 'isomorphic-fetch';
 import { getLocation } from '../api/browser-geolocation';
-
+import { db } from '../api/firebaseapp';
 import { YELLOW, PURPLE } from '../config/colors'
 import consoleBanner from '../config/banner'
+
 export default class Index extends React.Component {
 
     constructor(props) {
@@ -18,16 +19,18 @@ export default class Index extends React.Component {
         this.state = {
             animateAvatar: false,
             browserGeoLocation: {
-                latitude: null,
-                longitude: null
-            }
+                latitude: 0,
+                longitude: 0
+            },
+            settings: {
+                availableForHire: null,
+                enableGeoLocation: null
+            },
+            showContactModal: false
         }
 
         this.timeOut = null;
 
-        this.state = {
-            showContactModal: false
-        }
 
         this.clickContactMe = this.clickContactMe.bind(this);
 
@@ -44,6 +47,14 @@ export default class Index extends React.Component {
         return { user: {bio: '🔥 Fullstack javascript developer 😜'} }
     }
 
+    componentWillMount() {
+        let self = this;
+        db.collection('appSettings').doc('sarath.tk')
+            .get().then((snapshot) => {
+                self.setState({settings: {availableForHire:snapshot.data().availableForHire}})
+            })
+    }
+
     componentDidMount() {
         // Console Banner
 
@@ -51,13 +62,20 @@ export default class Index extends React.Component {
 
         let self = this;
 
-        getLocation(function(position) {
+        try {
+            getLocation(function(position) {
 
 
-            self.setState({browserGeoLocation: {latitude:position.coords.latitude, longitude: position.coords.longitude}});
+                self.setState({browserGeoLocation: {latitude:position.coords.latitude, longitude: position.coords.longitude}});
 
-            
-        })
+                
+            })
+        }
+        catch(err) {
+            console.log('>', err);
+        }
+
+        
 
 
 
@@ -84,7 +102,7 @@ export default class Index extends React.Component {
          <main>
          <Meta title="Sarath's Home Page "/>
                 <div className="container">
-                   <Ribbon/>
+                   <Ribbon status={ this.state.settings.availableForHire }/>
                     <header>
                         <div className="hero__area">
                             <h1 className={classnames("main-title")}> > Hey, I'm Sarath</h1>

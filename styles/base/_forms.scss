@@ -14,7 +14,7 @@ input[type="text"], input[type="email"], input[type="number"] , textarea {
     width: 100%;
     border-radius: 3px;
     &:focus,:active {
-        box-shadow: 0px 2px 3px #ddd;
+        box-shadow: 0px 1px 2px #ddd;
         outline: none;
     }
 

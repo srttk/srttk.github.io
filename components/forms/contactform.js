@@ -47,7 +47,10 @@ export default class ContactForm extends Component {
                 self.resetForm();
                 self.props.handleCancel();
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+
+                self.setState({isRequesting: false});
+            });
 
     }
     render() {
