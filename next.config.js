@@ -6,8 +6,11 @@
 const webpack = require('webpack')
 const withSass = require('@zeit/next-sass');
 const githubAssetUrl = "https://cdn.rawgit.com/saratonite/saratonite.github.io/master/";
+const env = process.env.NODE_ENV || 'dev';
+console.log('ENVIRONMENT',env)
+const isProduction = (env.trim() !== 'github');
 
-const isProduction = true;
+console.log('isProduction',isProduction)
 
 const TRAGET_SARATHTK_GTRACKERID = 'UA-36053418-5';
 const TRAGET_GITHUBPAGE_GTRACKERID = 'UA-36053418-2';
