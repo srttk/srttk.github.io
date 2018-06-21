@@ -11,8 +11,8 @@ export default ({ title }) => (
 
      
       {/*  <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36053418-5"></script>
-      <script dangerouslySetInnerHTML={{__html:` /* github page tracker code : 'UA-36053418-2'*/ ; window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config','UA-36053418-5');`}}/>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.trackerID}`}></script>
+      <script dangerouslySetInnerHTML={{__html:` window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config','${process.env.trackerID}');`}}/>
       
     </Head>
 )
