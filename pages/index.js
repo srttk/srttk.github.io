@@ -112,10 +112,10 @@ export default class Index extends React.Component {
                         
 
                         <div className="contact__box">
-                            <a target="_blank" className="bg__link--1" href="https://github.com/saratonite?utm_source=sarath.tk">Github</a> / &nbsp;
-                            <a target="_blank" className="bg__link--1" href="https://twitter.com/sarathtvmala?utm_source=sarath.tk">Twitter</a> / &nbsp;
-                            <a target="_blank" className="bg__link--1" href="https://linkedin.com/in/sarath-k-0a614727?utm_source=sarath.tk">LinkedIn</a> / &nbsp;
-                            <a target="_blank" className="bg__link--1" href="https://saratonite.github.io/resume?utm_source=sarath.tk">Resume</a>
+                            <a target="_blank" className="bg__link--1" href={`https://github.com/saratonite?utm_source=${process.env.REFURL}`}>Github</a> / &nbsp;
+                            <a target="_blank" className="bg__link--1" href={`https://twitter.com/sarathtvmala?utm_source=${process.env.REFURL}`}>Twitter</a> / &nbsp;
+                            <a target="_blank" className="bg__link--1" href={`https://linkedin.com/in/sarath-k-0a614727?utm_source=${process.env.REFURL}`}>LinkedIn</a> / &nbsp;
+                            <a target="_blank" className="bg__link--1" href={`https://saratonite.github.io/resume?utm_source=${process.env.REFURL}`}>Resume</a>
                         </div>
                         <div className="header__contact">
                             <button className="btn btn--big" onClick={ this.clickContactMe }>CONTACT ME</button>
@@ -129,21 +129,21 @@ export default class Index extends React.Component {
 
                         <div className="project__container">
                             <div className="project__item bg__purple--pink">
-                                <h3><a target="_blank" href="http://airwaves.ml?utm_source=sarath.tk">Airwaves.ml</a></h3>
+                                <h3><a target="_blank" href={`http://airwaves.ml?utm_source=${process.env.REFURL}`}>Airwaves.ml</a></h3>
                                 <p className="text__small margin__top--small">2018</p>
                                 <div className="project__item--stack">
                                     <span>React</span> / <span>Redux</span> / <span>Firebase</span>
                                 </div>
                             </div>
                             <div className="project__item bg__green--dream">
-                                <h3><a target="_blank" href="https://asciiartgen.now.sh?utm_source=sarath.tk">ASCII.ART.GENRATOR</a></h3>
+                                <h3><a target="_blank" href={`https://asciiartgen.now.sh?utm_source=${process.env.REFURL}`}>ASCII.ART.GENRATOR</a></h3>
                                 <p className="text__small margin__top--small">2017</p>
                                 <div className="project__item--stack">
                                     <span>NodeJs</span> / <span>Express</span> 
                                 </div>
                             </div>
                             <div className="project__item bg__sky">
-                                <h3><a target="_blank" href="https://saratonite.github.io/book-search?utm_source=sarath.tk">BOOK SEARCH</a></h3>
+                                <h3><a target="_blank" href={`https://saratonite.github.io/book-search?utm_source=${process.env.REFURL}`}>BOOK SEARCH</a></h3>
                                 <p className="text__small margin__top--small">2014</p>
                                 <div className="project__item--stack">
                                     <span>AngularJs 1.x</span>

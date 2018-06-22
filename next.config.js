@@ -15,8 +15,13 @@ console.log('isProduction',isProduction)
 const TRAGET_SARATHTK_GTRACKERID = 'UA-36053418-5';
 const TRAGET_GITHUBPAGE_GTRACKERID = 'UA-36053418-2';
 
+// Referal urls
+const TRAGET_REF_SARATHTK = 'sarath.tk'
+const TRAGET_REF_GP = 'saratonite.github.io'
+
 const assetPrefix = isProduction ?  '' : githubAssetUrl;
 const googleAnalyticsTrackerID = isProduction ? TRAGET_SARATHTK_GTRACKERID :TRAGET_GITHUBPAGE_GTRACKERID ;
+const REFURL = isProduction ? TRAGET_REF_SARATHTK : TRAGET_REF_GP;
 
 module.exports = withSass({
     exportPathMap: function() {
@@ -30,7 +35,8 @@ module.exports = withSass({
         config.plugins.push(
           new webpack.DefinePlugin({
             'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
-            'process.env.trackerID': JSON.stringify(googleAnalyticsTrackerID)
+            'process.env.trackerID': JSON.stringify(googleAnalyticsTrackerID),
+            'process.env.REFURL': JSON.stringify(REFURL)
           }),
         )
     
