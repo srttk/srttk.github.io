@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import posed from "react-pose";
+
+const ModalWapper =posed.div({
+    idle: {x:"-50%",y:"-50%", scale: .5, opacity: 0},
+    show: {x:"-50%",y:"-50%",scale: 1 ,opacity: 1}
+})
 
 export default class Modal  extends Component {
     static defaultProps = { title: 'Modal', chidren: 'Hello'}
@@ -36,7 +42,7 @@ export default class Modal  extends Component {
         
         
         return (
-            <div className="modal" className={ show == true ? 'modal active': 'modal'}>
+            <ModalWapper           pose={this.props.show ? "show" : "idle"} className="modal" className={ show == true ? 'modal active': 'modal'}>
                 <div className="modal-header">
                     <div>{ title }</div>
                     <div className="close" ><a href="javascript:void(0);" onClick={ closeModal }>&times;</a></div>
@@ -44,7 +50,7 @@ export default class Modal  extends Component {
                 <div className="modal-body">
                 { children }
                 </div>
-            </div>
+            </ModalWapper>
         );
     }
 }

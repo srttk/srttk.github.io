@@ -22,7 +22,8 @@
     "next": "^6.0.3",
     "node-sass": "^4.9.0",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-pose": "^2.1.2"
   },
   "devDependencies": {
     "@zeit/next-sass": "^0.1.2",
