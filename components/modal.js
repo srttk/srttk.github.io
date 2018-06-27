@@ -42,7 +42,7 @@ export default class Modal  extends Component {
         
         
         return (
-            <ModalWapper           pose={this.props.show ? "show" : "idle"} className="modal" className={ show == true ? 'modal active': 'modal'}>
+            <ModalWapper           pose={this.props.show ? "show" : "idle"}  className={ show == true ? 'modal active': 'modal'}>
                 <div className="modal-header">
                     <div>{ title }</div>
                     <div className="close" ><a href="javascript:void(0);" onClick={ closeModal }>&times;</a></div>

@@ -8,7 +8,6 @@ import classnames from 'classnames'
 import fetch from 'isomorphic-fetch';
 import { getLocation } from '../api/browser-geolocation';
 import { db } from '../api/firebaseapp';
-import { YELLOW, PURPLE } from '../config/colors'
 import consoleBanner from '../config/banner'
 
 export default class Index extends React.Component {

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { YELLOW } from '../config/colors';
 import '../styles/index.scss';
 export default ({ title }) => (
     <Head>
