@@ -9,6 +9,7 @@ import fetch from 'isomorphic-fetch';
 import { getLocation } from '../api/browser-geolocation';
 import { db } from '../api/firebaseapp';
 import consoleBanner from '../config/banner'
+import Logo from '../components/Logo';
 
 export default class Index extends React.Component {
 
@@ -47,19 +48,20 @@ export default class Index extends React.Component {
     }
 
     componentWillMount() {
+    }
+    
+    componentDidMount() {
+        // Console Banner
+        
+        console.log(consoleBanner);
         let self = this;
+        
         db.collection('appSettings').doc('sarath.tk')
             .get().then((snapshot) => {
                 self.setState({settings: {availableForHire:snapshot.data().availableForHire}})
             })
-    }
 
-    componentDidMount() {
-        // Console Banner
-
-        console.log(consoleBanner);
-
-        let self = this;
+        
 
         try {
             getLocation(function(position) {
@@ -104,6 +106,7 @@ export default class Index extends React.Component {
                    <Ribbon status={ this.state.settings.availableForHire }/>
                     <header>
                         <div className="hero__area">
+                        <Logo/>
                             <h1 className={classnames("main-title")}> > Hey, I'm Sarath</h1>
 
                             <p className="sub-title">{ this.props.user.bio }</p>
