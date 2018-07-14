@@ -22,8 +22,6 @@ export default () => (
             fill="transparent"
             stroke="url(#grad1)" 
             strokeWidth="5"
-
-            stroke-linejoin="arcs"
             />
             
         </svg>
