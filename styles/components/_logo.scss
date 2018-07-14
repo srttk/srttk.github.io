@@ -1,12 +1,20 @@
 .logo__path {
     stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 5s linear forwards;
+    stroke-dashoffset: 1200;
+    animation: dash 8s linear forwards;
     
+}
+svg {
+    transition: all 0.3s ease-in-out;
+}
+
+svg:hover{
+    transform: translateY(-6px);
 }
 
 @keyframes dash {
     to {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 50;
+        stroke-dasharray: none;
     }
   }

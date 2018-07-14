@@ -12,7 +12,8 @@
     "initconfig": "node ./scripts/build-config.js",
     "export": "npm run build && next export && npm run copy",
     "copy": "cp ./.gitignore ./out/ ",
-    "github:export": "set NODE_ENV=github && rm -r ./.next && rm -r ./out && npm run build && next export && npm run copy",
+    "clean": "rm -r ./.next && rm -r ./out",
+    "github:export": "NODE_ENV=github npm run build && next export && npm run copy",
     "github:publish": "npm run github:export && node ./scripts/publish-githubpage.js"
   },
   "dependencies": {
