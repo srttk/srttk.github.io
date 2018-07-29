@@ -37,6 +37,9 @@ h3 {
     font-weight: 400;
     color: #cecece;
 }
+.text-center {
+    text-align: center;
+}
 .margin__top--small {
     margin-top: 1rem;
 }
@@ -71,6 +74,11 @@ header {
     }
 }
 
+
+.thanks-close-div {
+    position: relative;
+    top: 40px;
+}
 
 
 @media only screen and(max-width: $max-width) {

@@ -7,11 +7,12 @@ export default class ContactForm extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { contact: { name: '', email: '', message: ''}, isRequesting: false}
+        this.state = {isFormSubmited: false, contact: { name: '', email: '', message: ''}, isRequesting: false}
 
         this.onContactInputChanges = this.onContactInputChanges.bind(this);
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     onContactInputChanges(e) {
@@ -43,9 +44,9 @@ export default class ContactForm extends Component {
 
         db.collection('contacts').add(contact)
             .then((res) => {
-                alert('Thank you!!!')
                 self.resetForm();
-                self.props.handleCancel();
+                //self.props.handleCancel();
+                self.setState({ isFormSubmited: true })
             })
             .catch(err => {
 
@@ -53,8 +54,32 @@ export default class ContactForm extends Component {
             });
 
     }
+    
+    handleCancel() {
+
+        
+        this.props.handleCancel();
+        this.setState({ isFormSubmited: false});
+    }
     render() {
+
+        const { isFormSubmited } = this.state;
+
+        if( isFormSubmited ) {
+
+            return(
+                <div className="text-center">
+                    <h2>🙏 Thank You 😘 </h2>
+                    <div className="thanks-close-div">
+                        <button type="submit" className="btn btn-border btn-block" onClick={ this.handleCancel }>Close</button>
+                    </div>
+                </div>
+            )
+        }
+
         return (
+
+
             <form onSubmit={ this.handleSubmit }>
                             <div className="form-goup">
                                 <label className="form__label block">Name</label>
@@ -70,7 +95,7 @@ export default class ContactForm extends Component {
                             </div>
                             <div className="contact__footer">
                                 <button type="submit" className="btn btn-border" disabled={ this.state.isRequesting }>😛 Submit </button>
-                                <button type="button" onClick={ this.props.handleCancel } className="btn btn-border btn-border-danger">😑 Cancel</button>
+                                <button type="button" onClick={ this.handleCancel } className="btn btn-border btn-border-danger">😑 Cancel</button>
                             </div>
             </form>
         );
