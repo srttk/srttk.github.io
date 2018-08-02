@@ -115,7 +115,7 @@ export default class Index extends React.Component {
 
                         <div className="contact__box">
                             <a target="_blank" className="bg__link--1" href={`https://github.com/saratonite?utm_source=${process.env.REFURL}`}>Github</a> / &nbsp;
-                            <a target="_blank" className="bg__link--1" href={`https://twitter.com/sarathtvmala?utm_source=${process.env.REFURL}`}>Twitter</a> / &nbsp;
+                            {/* <a target="_blank" className="bg__link--1" href={`https://twitter.com/sarathtvmala?utm_source=${process.env.REFURL}`}>Twitter</a> / &nbsp; */}
                             <a target="_blank" className="bg__link--1" href={`https://linkedin.com/in/sarath-k-0a614727?utm_source=${process.env.REFURL}`}>LinkedIn</a> / &nbsp;
                             <a target="_blank" className="bg__link--1" href={`https://saratonite.github.io/resume?utm_source=${process.env.REFURL}`}>Resume</a>
                         </div>

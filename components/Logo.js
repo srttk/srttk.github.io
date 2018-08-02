@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default () => (
-    <svg
+    <svg 
             width="180"
             height="160"
             xmlns="http://www.w3.org/2000/svg"
@@ -17,11 +17,12 @@ export default () => (
                     <stop offset="100%" style={{'stopColor':'#e100ff',stopOpacity:'1'}} />
                 </linearGradient>
             </defs>
-            <path 
+            <path className="logo__path"
             d="M 10,150 L 90,10 L 170,150 z"
             fill="transparent"
             stroke="url(#grad1)" 
-            strokeWidth="6"/>
+            strokeWidth="5"
+            />
             
         </svg>
 )
