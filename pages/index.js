@@ -24,9 +24,11 @@ export default class Index extends React.Component {
             },
             settings: {
                 availableForHire: null,
-                enableGeoLocation: null
+                enableGeoLocation: null,
+                message: null
             },
-            showContactModal: false
+            showContactModal: false,
+            isLoaded: false
         }
 
         this.timeOut = null;
@@ -58,7 +60,7 @@ export default class Index extends React.Component {
         
         db.collection('appSettings').doc('sarath.tk')
             .get().then((snapshot) => {
-                self.setState({settings: {availableForHire:snapshot.data().availableForHire}})
+                self.setState({settings: {message:snapshot.data().message}, isLoaded: true})
             })
 
         
@@ -103,7 +105,7 @@ export default class Index extends React.Component {
          <main>
          <Meta title="Sarath's Home Page "/>
                 <div className="container">
-                   <Ribbon status={ this.state.settings.availableForHire }/>
+                   <Ribbon status={ this.state.settings.message } isLoaded={ this.state.isLoaded }/>
                     <header>
                         <div className="hero__area">
                         <Logo/>

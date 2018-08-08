@@ -7,22 +7,23 @@ export default class Ribbon extends Component {
 
     }
     render() {
-        const { status } = this.props;
+        const { status, isLoaded } = this.props;
 
         let statusClass = 'loading';
 
-        switch(status) {
+        switch(isLoaded) {
             case true :
                 statusClass = 'yep';break;
             case false:
                 statusClass = 'nope'; break;
         }
 
+
         return (
             <div className={ 'ribbon '+statusClass}>
-                { (status === true) && <span>Available For Hire 😁 </span>}
-                { (status === false) && <span>Not Available For Hire 😶</span>}
-                { (status === null) && <span>loading...</span>}
+                { (isLoaded === true) && <span>{status} </span>}
+                { (isLoaded === false) && <span>Loading...</span>}
+
             </div>
         );
     }
