@@ -1,12 +1,11 @@
 {
   "name": "saratonite.github.io",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Sarathoite Github Page",
   "author": "Sarath &lt;sarath.hacks@gmail.com&gt;",
   "private": true,
   "scripts": {
-    "start": "set NODE_ENV=dev && next start",
-    "dev": "set NODE_ENV=dev && next",
+    "dev": "next",
     "build": "next build",
     "pro-build": "npm run initconfig && npm run export",
     "initconfig": "node ./scripts/build-config.js",
@@ -17,17 +16,17 @@
     "github:publish": "npm run github:export && node ./scripts/publish-githubpage.js"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "firebase": "^5.0.4",
-    "isomorphic-fetch": "^2.2.1",
-    "next": "^6.1.1",
-    "node-sass": "^4.9.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-pose": "^2.1.2"
+    "@geist-ui/react": "^2.0.1",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@zeit/next-sass": "^0.1.2",
-    "gh-pages": "^1.2.0"
+    "@mdx-js/loader": "^1.6.16",
+    "@next/mdx": "^9.5.2",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.46",
+    "gh-pages": "^1.2.0",
+    "typescript": "^3.9.7"
   }
 }
