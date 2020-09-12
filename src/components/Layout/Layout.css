@@ -1,0 +1,15 @@
+.main__container {
+    @apply max-w-screen-md bg-white w-full mx-auto relative inset-y-auto flex flex-col rounded;
+}
+
+header {
+    @apply border-b border-gray-200 py-2 px-2;
+}
+
+footer {
+    @apply border-t border-gray-200 py-2 px-2 text-xs text-gray-500;
+}
+
+.brand__title {
+    @apply text-3xl font-bold ;
+}

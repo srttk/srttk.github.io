@@ -1,15 +1,13 @@
-import { GeistProvider, CssBaseline } from '@geist-ui/react'
-import Layout from '@/components/Layout'
-
+import { MDXProvider } from '@mdx-js/react';
+import Layout from '@/components/Layout';
+import '../styles/index.css';
 export default function MyApp({ Component, pageProps}) {
 
     return (
-        <GeistProvider>
-            <CssBaseline/>
+        <MDXProvider>
             <Layout>
                 <Component {...pageProps} />
             </Layout>
-
-        </GeistProvider>
+        </MDXProvider>
     )
 }
