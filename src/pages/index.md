@@ -8,8 +8,18 @@
 ### Projects
 
 + [Bento](htts://github.com/saratonite)
-    - Full-stack React Graphql
-        + React / Apollo GraphQL
+
+    Full-stack React Graphql
+
+    + React
+    + Apollo GraphQL
+    + Node
+    + Typescript
 + [c19-world](htts://github.com/saratonite)
-    - Covid-19 Tracker
-        + React / Next.js
+
+    Covid-19 Tracker
+
+    + React 
+    + Next.js
+
++ [ASCII Art Generotor](https://saratonite.github.io)

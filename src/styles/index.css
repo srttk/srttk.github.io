@@ -28,31 +28,70 @@ body {
 
 
 /* Markdown heading styles */
-main h1 {
-    @apply text-5xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r  from-indigo-500 to-pink-600 ;
-}
-main h2 {
-    @apply text-4xl text-center font-thin ;
-}
+/* purgecss start ignore */
 
-main p {
-    @apply text-center mt-3 mb-2;
-}
+    main h1 {
+        @apply text-2xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r  from-indigo-500 to-pink-600 my-3;
+    }
 
-main p > a {
-    @apply inline-block text-indigo-500 font-bold px-3 py-2  mx-1 bg-gray-200 rounded-full;
-}
-main p > a:hover {
-    @apply bg-gray-300 text-indigo-600;
-}
+    @screen sm {
+        main h1 {
 
-main h3 {
-    @apply text-4xl my-2;
-}
+            @apply text-5xl my-2;
+        }
+    }
+    main h2 {
+        @apply text-xl text-center font-light ;
+    }
 
-main ul {
-    @apply grid grid-cols-2 gap-4;
-}
-main > ul > li {
-    @apply px-3 py-3 bg-white rounded-md shadow-md mt-2;
-}
+    @screen sm {
+        main h2 {
+            @apply text-4xl font-thin ;
+        }
+    }
+    
+    main p {
+        @apply text-center mt-3 mb-2;
+    }
+    
+    main p > a {
+        @apply inline-block text-indigo-500 font-bold px-3 py-2  mx-1 bg-gray-200 rounded-full;
+    }
+    main p > a:hover {
+        @apply bg-gray-300 text-indigo-600;
+    }
+    
+    main h3 {
+        @apply text-4xl my-2;
+    }
+    
+    main  > ul {
+        @apply grid grid-cols-1 gap-2;
+    }
+    @screen sm {
+        main > ul {
+            @apply grid grid-cols-2 gap-4;
+        }
+    }
+    main > ul > li {
+        @apply px-3 py-3 bg-white  shadow rounded-md mt-2 border border-gray-300 bg-gradient-to-tr from-purple-700 to-pink-800 text-white;
+    }
+    
+    main > ul > li:hover {
+        @apply shadow-lg;
+    }
+
+
+    main > ul > li > a {
+        @apply font-bold text-xl;
+    }
+
+    main > ul > li > ul {
+        @apply flex ;
+    }
+
+    main > ul > li > ul > li {
+        @apply inline-block bg-gray-200 rounded-lg text-indigo-500 text-sm px-2 font-semibold mr-1;
+    }
+/* purgecss end ignore */
+
