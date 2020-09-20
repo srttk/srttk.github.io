@@ -74,7 +74,7 @@ body {
         }
     }
     main > ul > li {
-        @apply px-3 py-3 bg-white  shadow rounded-md mt-2 border border-gray-300 bg-gradient-to-tr from-purple-700 to-pink-800 text-white;
+        @apply px-3 py-3 bg-white   rounded-lg mt-2  text-gray-700 border border-indigo-400;
     }
     
     main > ul > li:hover {
@@ -87,11 +87,11 @@ body {
     }
 
     main > ul > li > ul {
-        @apply flex ;
+        @apply flex;
     }
 
     main > ul > li > ul > li {
-        @apply inline-block bg-gray-200 rounded-lg text-indigo-500 text-sm px-2 font-semibold mr-1;
+        @apply self-start inline-block bg-green-300 rounded-full text-green-600 text-sm px-2 font-semibold mr-1 ;
     }
 /* purgecss end ignore */
 
