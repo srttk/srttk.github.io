@@ -57,7 +57,7 @@ export default function HomePage() {
             bg={useColorModeValue("gray.800", "blackAlpha.400")}
             color={useColorModeValue("white", "gray.200")}
             _hover={{
-              bg: useColorModeValue("gray.700", "blackAlpha.100"),
+              bg: useColorModeValue("gray.700", "gray.600"),
             }}
             leftIcon={<FaGithub />}
             href={`https://github.com/saratonite`}
@@ -72,7 +72,7 @@ export default function HomePage() {
             bg={useColorModeValue("gray.800", "blackAlpha.400")}
             color={useColorModeValue("white", "gray.200")}
             _hover={{
-              bg: useColorModeValue("gray.700", "blackAlpha.100"),
+              bg: useColorModeValue("gray.700", "gray.600"),
             }}
             leftIcon={<RiProfileLine />}
             href={`https://saratonite.github.io/resume`}
@@ -86,7 +86,7 @@ export default function HomePage() {
             rounded="full"
             bg={useColorModeValue("gray.800", "blackAlpha.400")}
             _hover={{
-              bg: useColorModeValue("gray.700", "blackAlpha.100"),
+              bg: useColorModeValue("gray.700", "gray.600"),
             }}
             color={useColorModeValue("white", "gray.200")}
             // variant="outline"
