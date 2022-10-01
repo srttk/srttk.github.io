@@ -1,13 +1,13 @@
-import { MDXProvider } from '@mdx-js/react';
-import Layout from '@/components/Layout';
-import '../styles/index.css';
-export default function MyApp({ Component, pageProps}) {
+import React from "react";
+import { AppProps } from "next/app";
+import { ChakraProvider, createLocalStorageManager } from "@chakra-ui/react";
+const manager = createLocalStorageManager("srt-clolor-mode");
+import { theme } from "~/config";
 
-    return (
-        <MDXProvider>
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
-        </MDXProvider>
-    )
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ChakraProvider colorModeManager={manager} theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
 }

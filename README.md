@@ -4,7 +4,6 @@
 
 # Build Setup :smile:
 
-
 ```bash
   git commit -am "Save local changes"
   git checkout master
@@ -15,4 +14,4 @@
   git checkout -
 ```
 
-Build with ❤️ and javascript  By Sarath :smirk:
+Build with ❤️ and javascript By Sarath :smirk:
