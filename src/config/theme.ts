@@ -5,4 +5,14 @@ export const theme = extendTheme({
     initialColorMode: "system",
     useSystemColorMode: true,
   },
+  styles: {
+    global: (props) => ({
+      "::selection": {
+        color: props.colorMode === "dark" ? "teal.300" : "teal.400",
+      },
+      "::-moz-selection": {
+        color: props.colorMode === "dark" ? "teal.300" : "teal.400",
+      },
+    }),
+  },
 });

@@ -25,6 +25,7 @@ export default function HomePage() {
         w="full"
         mx="auto"
         bg={useColorModeValue("white", "gray.700")}
+        color={useColorModeValue("gray.600", "gray.200")}
         mt={20}
         rounded="xl"
         py={4}
@@ -44,9 +45,11 @@ export default function HomePage() {
         <Heading size="md" fontFamily="mono">
           Sarath TK
         </Heading>
-        <Text fontSize="sm" fontWeight="medium">
-          Fullstack Developer, Building polished software and web experiences.
-          Crafting interfaces.
+        <Heading size="xs" color={useColorModeValue("gray.500", "gray.400")}>
+          Full-stack Developer{" "}
+        </Heading>
+        <Text fontSize="xs" fontWeight="medium" textAlign="center">
+          Building polished software and web experiences. Crafting interfaces.
         </Text>
 
         <VStack w="full" p={4} spacing={5}>
@@ -118,19 +121,22 @@ export default function HomePage() {
           <Tag colorScheme="gray" py={1} size="sm">
             Next.js
           </Tag>
+          <Tag colorScheme="orange" py={1} size="sm">
+            ReST
+          </Tag>
           <Tag colorScheme="pink" py={1} size="sm">
             GraphQL
           </Tag>
           <Tag colorScheme="blue" py={1} size="sm">
             Postgresql
           </Tag>
+          <Tag colorScheme="red" py={1} size="sm">
+            Angular
+          </Tag>
           <Tag colorScheme="cyan" py={1} size="sm">
             Tailwind.css
           </Tag>
 
-          <Tag colorScheme="red" py={1} size="sm">
-            Angular
-          </Tag>
           <Tag colorScheme="gray" py={1} size="sm">
             Remix
           </Tag>
