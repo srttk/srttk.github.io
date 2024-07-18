@@ -1,9 +1,15 @@
+
 const isProd = process.env.NODE_ENV === 'production'
 const githubAssetUrl = "https://cdn.jsdelivr.net/gh/saratonite/saratonite.github.io@master";
 
-console.log("isProd ", isProd)
+/** @type {import('next').NextConfig} */
 
-module.exports = {
+
+const nextConfig = {
   // Use the CDN in production and localhost for development.
   assetPrefix: isProd ? githubAssetUrl : undefined,
+  output:"export",
+  distDir:"out"
 }
+
+module.exports = nextConfig
